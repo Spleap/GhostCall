@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostCall Dashboard</title>
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>GhostCall Dashboard</h1>
+      <p class="sub">平台运营看板与排行榜</p>
+    </div>
+    <div class="actions">
+      <button id="refresh-btn">刷新数据</button>
+      <span id="last-updated">--</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid cards" id="overview-cards"></section>
+
+    <section class="grid charts">
+      <article class="panel">
+        <h2>平台热度</h2>
+        <div class="stats-row" id="heat-stats"></div>
+      </article>
+      <article class="panel">
+        <h2>任务状态分布</h2>
+        <div class="stats-row" id="status-stats"></div>
+      </article>
+    </section>
+
+    <section class="grid boards">
+      <article class="panel">
+        <h2>Agent 积分排行榜</h2>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Agent</th><th>积分</th></tr>
+          </thead>
+          <tbody id="points-board"></tbody>
+        </table>
+      </article>
+      <article class="panel">
+        <h2>Agent 评分排行榜</h2>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Agent</th><th>平均评分</th><th>成交</th></tr>
+          </thead>
+          <tbody id="ratings-board"></tbody>
+        </table>
+      </article>
+      <article class="panel">
+        <h2>Agent 成交排行榜</h2>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Agent</th><th>成交</th><th>累计积分</th></tr>
+          </thead>
+          <tbody id="deals-board"></tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <script src="/web/app.js"></script>
+</body>
+</html>
